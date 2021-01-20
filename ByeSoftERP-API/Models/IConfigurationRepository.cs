@@ -7,7 +7,7 @@ namespace ByeSoftERP_API.Models
 {
     public interface IConfigurationRepository
     {
-        public IEnumerable<ProductTypes> GetProductTypes();
-        public IEnumerable<UOM> GetUOMs();
+        public Task<IEnumerable<ProductTypes>> GetProductTypes();
+        public Task<IEnumerable<UOM>> GetUOMs();
     }
 }

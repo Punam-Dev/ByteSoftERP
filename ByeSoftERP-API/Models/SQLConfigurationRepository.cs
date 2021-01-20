@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using Microsoft.EntityFrameworkCore;
 namespace ByeSoftERP_API.Models
 {
     public class SQLConfigurationRepository : IConfigurationRepository
@@ -13,14 +13,15 @@ namespace ByeSoftERP_API.Models
             this.appDbContext = dbContext;
         }
 
-        public IEnumerable<ProductTypes> GetProductTypes()
+        public async Task<IEnumerable<ProductTypes>> GetProductTypes()
         {
-            throw new NotImplementedException();
+            return await appDbContext.ProductTypes.FromSqlRaw<ProductTypes>("sp_GetProductTypes").ToListAsync();
         }
 
-        public IEnumerable<UOM> GetUOMs()
+        public async Task<IEnumerable<UOM>> GetUOMs()
         {
-            throw new NotImplementedException();
+            return await appDbContext.UOM.FromSqlRaw<UOM>("sp_GetUOMs").ToListAsync();
+
         }
     }
 }

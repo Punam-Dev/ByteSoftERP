@@ -9,6 +9,7 @@ namespace ByeSoftERP_API.Models
 {
     public class ProductTypes
     {
+        [Key]
         public string ProdTypeID { get; set; }
         public string ProdTypeName { get; set; }
         public string ProdTypeDesc { get; set; }
