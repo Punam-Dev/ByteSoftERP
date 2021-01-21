@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -7,12 +8,13 @@ using System.Threading.Tasks;
 
 namespace ByeSoftERP_API.Models
 {
+    [Keyless]
     public class ProductTypes
     {
-        [Key]
-        public string ProdTypeID { get; set; }
+        //[Key]
+        //public string ProdTypeID { get; set; }
         public string ProdTypeName { get; set; }
         public string ProdTypeDesc { get; set; }
-        public string ProdTypeIndex { get; set; }
+        public int ProdTypeIndex { get; set; }
     }
 }
