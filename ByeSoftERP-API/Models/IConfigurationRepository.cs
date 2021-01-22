@@ -8,6 +8,6 @@ namespace ByeSoftERP_API.Models
     public interface IConfigurationRepository
     {
         public Task<IEnumerable<ProductTypes>> GetProductTypes();
-        public Task<IEnumerable<UOM>> GetUOMs();
+        public Task<IEnumerable<UOMs>> GetUOMs();
     }
 }

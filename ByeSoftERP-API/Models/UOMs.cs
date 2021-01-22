@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace ByeSoftERP_API.Models
 {
-    [Keyless]
-    public class UOM
+    public class UOMs
     {
-        //[Key]
-        //public string UOMID { get; set; }
+        [Key]
+        public string UOMID { get; set; }
         public string UOMName { get; set; }
         public string UOMCode { get; set; }
         public string UOMDesc { get; set; }

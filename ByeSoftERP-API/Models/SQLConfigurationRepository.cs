@@ -18,9 +18,9 @@ namespace ByeSoftERP_API.Models
             return await appDbContext.ProductTypes.FromSqlRaw<ProductTypes>("sp_GetProductTypes").ToListAsync();
         }
 
-        public async Task<IEnumerable<UOM>> GetUOMs()
+        public async Task<IEnumerable<UOMs>> GetUOMs()
         {
-            return await appDbContext.UOM.FromSqlRaw<UOM>("sp_GetUOMs").ToListAsync();
+            return await appDbContext.UOMs.FromSqlRaw<UOMs>("sp_GetUOMs").ToListAsync();
 
         }
     }

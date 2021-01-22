@@ -8,11 +8,10 @@ using System.Threading.Tasks;
 
 namespace ByeSoftERP_API.Models
 {
-    [Keyless]
     public class ProductTypes
     {
-        //[Key]
-        //public string ProdTypeID { get; set; }
+        [Key]
+        public string ProdTypeID { get; set; }
         public string ProdTypeName { get; set; }
         public string ProdTypeDesc { get; set; }
         public int ProdTypeIndex { get; set; }

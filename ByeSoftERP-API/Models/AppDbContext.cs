@@ -12,7 +12,7 @@ namespace ByeSoftERP_API.Models
         { }
 
         public DbSet<ProductTypes> ProductTypes { get; set; }
-        public DbSet<UOM> UOM { get; set; }
+        public DbSet<UOMs> UOMs { get; set; }
         public DbSet<Products> Products { get; set; }
     }
 }
